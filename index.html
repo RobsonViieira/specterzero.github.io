@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Canal Seguro</title>
+<style>
+  body {
+    background-color: #000;
+    color: #0f0;
+    font-family: 'Courier New', monospace;
+    padding: 40px;
+  }
+  #terminal {
+    white-space: pre-wrap;
+    font-size: 1.2rem;
+    line-height: 1.5;
+    border-left: 3px solid #0f0;
+    padding-left: 10px;
+    max-width: 600px;
+  }
+  a {
+    color: #0f0;
+    text-decoration: none;
+    border: 1px solid #0f0;
+    padding: 6px 14px;
+    margin-top: 20px;
+    display: inline-block;
+    transition: 0.3s;
+  }
+  a:hover {
+    background-color: #0f0;
+    color: #000;
+  }
+</style>
+</head>
+<body>
+<div id="terminal"></div>
+
+<div style="margin-top: 40px;">
+  <a href="https://github.com/seuusuario" target="_blank">GitHub</a>
+  <a href="mailto:specter@protonmail.com">Contato Seguro</a>
+</div>
+
+<script>
+  const terminal = document.getElementById('terminal');
+  const text = `> Acesso concedido.\n
+Codinome: Specter Zero\n
+Sistemas foram feitos para falhar.\n
+IA Tática | Red Team | Deep Exploit\n
+\n
+> Digite "help" para listar comandos.\n`;
+  
+  let i = 0;
+  function typeWriter() {
+    if (i < text.length) {
+      terminal.textContent += text.charAt(i);
+      i++;
+      setTimeout(typeWriter, 50);
+    }
+  }
+  typeWriter();
+</script>
+</body>
+</html>
